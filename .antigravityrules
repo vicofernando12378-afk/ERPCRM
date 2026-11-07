@@ -1,0 +1,13 @@
+# ERP: arquitectura vigente
+
+Backend: Laravel moderno y PHP. Frontend: React y TypeScript.
+Base de datos: MySQL 8.4, InnoDB. No utilizar Firebase.
+
+- Autenticación de sesión con cookies y protección CSRF; autorización en servidor.
+- Prohibidos bypass de autenticación y roles enviados por cabeceras de prueba.
+- Importes decimales exactos y operaciones transaccionales e idempotentes.
+- Stock auditable mediante movimientos; impedir saldos negativos.
+- Conservar source-code-v1.7 y backend-google como referencia histórica.
+- rencodie_pedidos.sql contiene datos de prueba. No es fuente de producción.
+- No desplegar configuraciones Firebase heredadas.
+- Verificar backend sobre erp_testing y recorrido de navegador antes de publicar cambios.

@@ -1,0 +1,2660 @@
+{
+  "rutas_a_controladores": [
+    {
+      "linea": 8,
+      "declaracion": "Route::get('cronjob', 'CronController@index');",
+      "controlador": "CronController",
+      "metodo": "index",
+      "metodo_existe": true
+    },
+    {
+      "linea": 11,
+      "declaracion": "Route::get('/', 'LoginController@login');",
+      "controlador": "LoginController",
+      "metodo": "login",
+      "metodo_existe": true
+    },
+    {
+      "linea": 12,
+      "declaracion": "Route::get('/login', 'LoginController@login');",
+      "controlador": "LoginController",
+      "metodo": "login",
+      "metodo_existe": true
+    },
+    {
+      "linea": 13,
+      "declaracion": "Route::post('/authenticate', 'LoginController@authenticate');",
+      "controlador": "LoginController",
+      "metodo": "authenticate",
+      "metodo_existe": true
+    },
+    {
+      "linea": 14,
+      "declaracion": "Route::get('/logout', 'LoginController@logout');",
+      "controlador": "LoginController",
+      "metodo": "logout",
+      "metodo_existe": true
+    },
+    {
+      "linea": 16,
+      "declaracion": "Route::get('password/resets/{token?}', 'LoginController@showResetForm');",
+      "controlador": "LoginController",
+      "metodo": "showResetForm",
+      "metodo_existe": true
+    },
+    {
+      "linea": 17,
+      "declaracion": "Route::post('password/resets/{token?}', 'LoginController@setPassword');",
+      "controlador": "LoginController",
+      "metodo": "setPassword",
+      "metodo_existe": true
+    },
+    {
+      "linea": 18,
+      "declaracion": "Route::post('password/email', 'LoginController@sendResetLinkEmail');",
+      "controlador": "LoginController",
+      "metodo": "sendResetLinkEmail",
+      "metodo_existe": true
+    },
+    {
+      "linea": 19,
+      "declaracion": "Route::get('password/reset', 'LoginController@reset');",
+      "controlador": "LoginController",
+      "metodo": "reset",
+      "metodo_existe": true
+    },
+    {
+      "linea": 22,
+      "declaracion": "Route::get('customer', 'CustomerAuth\\AuthController@showLoginForm');",
+      "controlador": "CustomerAuth\\AuthController",
+      "metodo": "showLoginForm",
+      "metodo_existe": true
+    },
+    {
+      "linea": 23,
+      "declaracion": "Route::post('customer/authenticate', 'CustomerAuth\\AuthController@login');",
+      "controlador": "CustomerAuth\\AuthController",
+      "metodo": "login",
+      "metodo_existe": false
+    },
+    {
+      "linea": 24,
+      "declaracion": "Route::get('customer/logout', 'CustomerAuth\\AuthController@logout');",
+      "controlador": "CustomerAuth\\AuthController",
+      "metodo": "logout",
+      "metodo_existe": true
+    },
+    {
+      "linea": 26,
+      "declaracion": "Route::get('customer/dashboard', 'CustomerPanelController@index');",
+      "controlador": "CustomerPanelController",
+      "metodo": "index",
+      "metodo_existe": true
+    },
+    {
+      "linea": 27,
+      "declaracion": "Route::get('customer/profile', 'CustomerPanelController@profile');",
+      "controlador": "CustomerPanelController",
+      "metodo": "profile",
+      "metodo_existe": true
+    },
+    {
+      "linea": 28,
+      "declaracion": "Route::post('customer/profile', 'CustomerPanelController@updateProfile');",
+      "controlador": "CustomerPanelController",
+      "metodo": "updateProfile",
+      "metodo_existe": true
+    },
+    {
+      "linea": 30,
+      "declaracion": "Route::get('customer-panel/order/{id}','CustomerPanelController@salesOrder');",
+      "controlador": "CustomerPanelController",
+      "metodo": "salesOrder",
+      "metodo_existe": true
+    },
+    {
+      "linea": 31,
+      "declaracion": "Route::get('customer-panel/view-order-details/{id}','CustomerPanelController@viewOrderDetails');",
+      "controlador": "CustomerPanelController",
+      "metodo": "viewOrderDetails",
+      "metodo_existe": true
+    },
+    {
+      "linea": 32,
+      "declaracion": "Route::get('customer-panel/orderPdf/{order_id}','CustomerPanelController@orderPdf');",
+      "controlador": "CustomerPanelController",
+      "metodo": "orderPdf",
+      "metodo_existe": true
+    },
+    {
+      "linea": 33,
+      "declaracion": "Route::get('customer-panel/orderPrint/{order_id}','CustomerPanelController@orderPrint');",
+      "controlador": "CustomerPanelController",
+      "metodo": "orderPrint",
+      "metodo_existe": true
+    },
+    {
+      "linea": 35,
+      "declaracion": "Route::get('customer-panel/invoice/{id}','CustomerPanelController@invoice');",
+      "controlador": "CustomerPanelController",
+      "metodo": "invoice",
+      "metodo_existe": true
+    },
+    {
+      "linea": 36,
+      "declaracion": "Route::get('customer-panel/view-detail-invoice/{order_id}/{invoice_id}','CustomerPanelController@viewInvoiceDetails');",
+      "controlador": "CustomerPanelController",
+      "metodo": "viewInvoiceDetails",
+      "metodo_existe": true
+    },
+    {
+      "linea": 37,
+      "declaracion": "Route::get('customer-panel/invoice-pdf/{order_id}/{invoice_id}','CustomerPanelController@invoicePdf');",
+      "controlador": "CustomerPanelController",
+      "metodo": "invoicePdf",
+      "metodo_existe": true
+    },
+    {
+      "linea": 38,
+      "declaracion": "Route::get('customer-panel/invoice-print/{order_id}/{invoice_id}','CustomerPanelController@invoicePrint');",
+      "controlador": "CustomerPanelController",
+      "metodo": "invoicePrint",
+      "metodo_existe": true
+    },
+    {
+      "linea": 40,
+      "declaracion": "Route::get('customer-panel/payment/{id}','CustomerPanelController@payment');",
+      "controlador": "CustomerPanelController",
+      "metodo": "payment",
+      "metodo_existe": true
+    },
+    {
+      "linea": 41,
+      "declaracion": "Route::get('customer-panel/view-receipt/{id}','CustomerPanelController@viewReceipt');",
+      "controlador": "CustomerPanelController",
+      "metodo": "viewReceipt",
+      "metodo_existe": true
+    },
+    {
+      "linea": 43,
+      "declaracion": "Route::get('customer-panel/shipment/{id}','CustomerPanelController@shipment');",
+      "controlador": "CustomerPanelController",
+      "metodo": "shipment",
+      "metodo_existe": true
+    },
+    {
+      "linea": 44,
+      "declaracion": "Route::get('customer-panel/view-shipment-details/{order_id}/{shipment_id}','CustomerPanelController@shipmentDetails');",
+      "controlador": "CustomerPanelController",
+      "metodo": "shipmentDetails",
+      "metodo_existe": true
+    },
+    {
+      "linea": 46,
+      "declaracion": "Route::get('customer-panel/branch/{id}','CustomerPanelController@branch');",
+      "controlador": "CustomerPanelController",
+      "metodo": "branch",
+      "metodo_existe": true
+    },
+    {
+      "linea": 47,
+      "declaracion": "Route::get('customer-panel/branch/edit/{id}','CustomerPanelController@branchEdit');",
+      "controlador": "CustomerPanelController",
+      "metodo": "branchEdit",
+      "metodo_existe": true
+    },
+    {
+      "linea": 48,
+      "declaracion": "Route::post('customer-panel/branch/update/{id}','CustomerPanelController@branchUpdate');",
+      "controlador": "CustomerPanelController",
+      "metodo": "branchUpdate",
+      "metodo_existe": true
+    },
+    {
+      "linea": 50,
+      "declaracion": "Route::get('customer-panel/payment-pdf/{id}','CustomerPanelController@createReceiptPdf');",
+      "controlador": "CustomerPanelController",
+      "metodo": "createReceiptPdf",
+      "metodo_existe": true
+    },
+    {
+      "linea": 51,
+      "declaracion": "Route::get('customer-panel/payment-print/{id}','CustomerPanelController@printReceipt');",
+      "controlador": "CustomerPanelController",
+      "metodo": "printReceipt",
+      "metodo_existe": true
+    },
+    {
+      "linea": 52,
+      "declaracion": "Route::get('customer-panel/shipment-pdf/{order_id}/{shipment_id}','CustomerPanelController@shipmentPdf');",
+      "controlador": "CustomerPanelController",
+      "metodo": "shipmentPdf",
+      "metodo_existe": true
+    },
+    {
+      "linea": 53,
+      "declaracion": "Route::get('customer-panel/shipment-print/{order_id}/{shipment_id}','CustomerPanelController@shipmentPrint');",
+      "controlador": "CustomerPanelController",
+      "metodo": "shipmentPrint",
+      "metodo_existe": true
+    },
+    {
+      "linea": 58,
+      "declaracion": "Route::get('dashboard','DashboardController@index');",
+      "controlador": "DashboardController",
+      "metodo": "index",
+      "metodo_existe": true
+    },
+    {
+      "linea": 59,
+      "declaracion": "Route::post('change-lang','DashboardController@switchLanguage');",
+      "controlador": "DashboardController",
+      "metodo": "switchLanguage",
+      "metodo_existe": true
+    },
+    {
+      "linea": 60,
+      "declaracion": "Route::get('users','UserController@index')->middleware(['permission:manage_team_member']);",
+      "controlador": "UserController",
+      "metodo": "index",
+      "metodo_existe": true
+    },
+    {
+      "linea": 61,
+      "declaracion": "Route::get('create-user','UserController@create')->middleware(['permission:add_team_member']);",
+      "controlador": "UserController",
+      "metodo": "create",
+      "metodo_existe": true
+    },
+    {
+      "linea": 62,
+      "declaracion": "Route::post('save-user','UserController@store');",
+      "controlador": "UserController",
+      "metodo": "store",
+      "metodo_existe": true
+    },
+    {
+      "linea": 63,
+      "declaracion": "Route::get('edit-user/{id}','UserController@edit')->middleware(['permission:add_team_member']);",
+      "controlador": "UserController",
+      "metodo": "edit",
+      "metodo_existe": true
+    },
+    {
+      "linea": 64,
+      "declaracion": "Route::post('update-user/{id}','UserController@update');",
+      "controlador": "UserController",
+      "metodo": "update",
+      "metodo_existe": true
+    },
+    {
+      "linea": 65,
+      "declaracion": "Route::post('delete-user/{id}','UserController@destroy')->middleware(['permission:delete_team_member']);",
+      "controlador": "UserController",
+      "metodo": "destroy",
+      "metodo_existe": true
+    },
+    {
+      "linea": 66,
+      "declaracion": "Route::post('email-valid','UserController@validEmail');",
+      "controlador": "UserController",
+      "metodo": "validEmail",
+      "metodo_existe": true
+    },
+    {
+      "linea": 67,
+      "declaracion": "Route::get('profile','UserController@profile');",
+      "controlador": "UserController",
+      "metodo": "profile",
+      "metodo_existe": true
+    },
+    {
+      "linea": 68,
+      "declaracion": "Route::get('change-password/{id}','UserController@changePassword');",
+      "controlador": "UserController",
+      "metodo": "changePassword",
+      "metodo_existe": true
+    },
+    {
+      "linea": 69,
+      "declaracion": "Route::post('change-password/{id}','UserController@updatePassword');",
+      "controlador": "UserController",
+      "metodo": "updatePassword",
+      "metodo_existe": true
+    },
+    {
+      "linea": 71,
+      "declaracion": "Route::get('user/purchase-list/{id}','UserController@userPurchaseOrderList');",
+      "controlador": "UserController",
+      "metodo": "userPurchaseOrderList",
+      "metodo_existe": true
+    },
+    {
+      "linea": 72,
+      "declaracion": "Route::get('user/sales-order-list/{id}','UserController@userSalesOrderList');",
+      "controlador": "UserController",
+      "metodo": "userSalesOrderList",
+      "metodo_existe": true
+    },
+    {
+      "linea": 73,
+      "declaracion": "Route::get('user/sales-invoice-list/{id}','UserController@userSalesInvoiceList');",
+      "controlador": "UserController",
+      "metodo": "userSalesInvoiceList",
+      "metodo_existe": true
+    },
+    {
+      "linea": 74,
+      "declaracion": "Route::get('user/user-transfer-list/{id}','UserController@userTransferList');",
+      "controlador": "UserController",
+      "metodo": "userTransferList",
+      "metodo_existe": true
+    },
+    {
+      "linea": 75,
+      "declaracion": "Route::get('user/user-payment-list/{id}','UserController@userPaymentList');",
+      "controlador": "UserController",
+      "metodo": "userPaymentList",
+      "metodo_existe": true
+    },
+    {
+      "linea": 77,
+      "declaracion": "Route::get('role/list','RoleController@index')->middleware(['permission:manage_role']);",
+      "controlador": "RoleController",
+      "metodo": "index",
+      "metodo_existe": true
+    },
+    {
+      "linea": 78,
+      "declaracion": "Route::get('role/create','RoleController@create')->middleware(['permission:add_role']);",
+      "controlador": "RoleController",
+      "metodo": "create",
+      "metodo_existe": true
+    },
+    {
+      "linea": 79,
+      "declaracion": "Route::post('role/save','RoleController@store');",
+      "controlador": "RoleController",
+      "metodo": "store",
+      "metodo_existe": true
+    },
+    {
+      "linea": 80,
+      "declaracion": "Route::get('role/edit/{id}','RoleController@edit')->middleware(['permission:edit_role']);",
+      "controlador": "RoleController",
+      "metodo": "edit",
+      "metodo_existe": true
+    },
+    {
+      "linea": 81,
+      "declaracion": "Route::post('role/update','RoleController@update');",
+      "controlador": "RoleController",
+      "metodo": "update",
+      "metodo_existe": true
+    },
+    {
+      "linea": 82,
+      "declaracion": "Route::post('role/delete','RoleController@destroy')->middleware(['permission:delete_role']);",
+      "controlador": "RoleController",
+      "metodo": "destroy",
+      "metodo_existe": true
+    },
+    {
+      "linea": 85,
+      "declaracion": "Route::get('item-category','CategoryController@index');",
+      "controlador": "CategoryController",
+      "metodo": "index",
+      "metodo_existe": true
+    },
+    {
+      "linea": 86,
+      "declaracion": "Route::get('create-category','CategoryController@create')->middleware(['permission:add_item_category']);",
+      "controlador": "CategoryController",
+      "metodo": "create",
+      "metodo_existe": true
+    },
+    {
+      "linea": 87,
+      "declaracion": "Route::post('save-category','CategoryController@store');",
+      "controlador": "CategoryController",
+      "metodo": "store",
+      "metodo_existe": true
+    },
+    {
+      "linea": 88,
+      "declaracion": "Route::post('edit-category','CategoryController@edit')->middleware(['permission:edit_item_category']);",
+      "controlador": "CategoryController",
+      "metodo": "edit",
+      "metodo_existe": true
+    },
+    {
+      "linea": 89,
+      "declaracion": "Route::post('update-category','CategoryController@update');",
+      "controlador": "CategoryController",
+      "metodo": "update",
+      "metodo_existe": true
+    },
+    {
+      "linea": 90,
+      "declaracion": "Route::post('delete-category/{id}','CategoryController@destroy')->middleware(['permission:delete_item_category']);",
+      "controlador": "CategoryController",
+      "metodo": "destroy",
+      "metodo_existe": true
+    },
+    {
+      "linea": 91,
+      "declaracion": "Route::get('categorydownloadExcel/{type}', 'CategoryController@downloadCsv');",
+      "controlador": "CategoryController",
+      "metodo": "downloadCsv",
+      "metodo_existe": true
+    },
+    {
+      "linea": 92,
+      "declaracion": "Route::get('categoryimport', 'CategoryController@import');",
+      "controlador": "CategoryController",
+      "metodo": "import",
+      "metodo_existe": true
+    },
+    {
+      "linea": 93,
+      "declaracion": "Route::post('categoryimportcsv', 'CategoryController@importCsv');",
+      "controlador": "CategoryController",
+      "metodo": "importCsv",
+      "metodo_existe": true
+    },
+    {
+      "linea": 96,
+      "declaracion": "Route::get('unit','UnitController@index')->middleware(['permission:manage_unit']);",
+      "controlador": "UnitController",
+      "metodo": "index",
+      "metodo_existe": true
+    },
+    {
+      "linea": 97,
+      "declaracion": "Route::get('create-unit','UnitController@create')->middleware(['permission:add_unit']);",
+      "controlador": "UnitController",
+      "metodo": "create",
+      "metodo_existe": true
+    },
+    {
+      "linea": 98,
+      "declaracion": "Route::post('save-unit','UnitController@store');",
+      "controlador": "UnitController",
+      "metodo": "store",
+      "metodo_existe": true
+    },
+    {
+      "linea": 99,
+      "declaracion": "Route::post('edit-unit','UnitController@edit')->middleware(['permission:edit_unit']);",
+      "controlador": "UnitController",
+      "metodo": "edit",
+      "metodo_existe": true
+    },
+    {
+      "linea": 100,
+      "declaracion": "Route::post('update-unit','UnitController@update');",
+      "controlador": "UnitController",
+      "metodo": "update",
+      "metodo_existe": true
+    },
+    {
+      "linea": 101,
+      "declaracion": "Route::post('delete-unit/{id}','UnitController@destroy')->middleware(['permission:delete_unit']);",
+      "controlador": "UnitController",
+      "metodo": "destroy",
+      "metodo_existe": true
+    },
+    {
+      "linea": 105,
+      "declaracion": "Route::get('location','LocationController@index')->middleware(['permission:manage_location']);",
+      "controlador": "LocationController",
+      "metodo": "index",
+      "metodo_existe": true
+    },
+    {
+      "linea": 106,
+      "declaracion": "Route::get('create-location','LocationController@create')->middleware(['permission:add_location']);",
+      "controlador": "LocationController",
+      "metodo": "create",
+      "metodo_existe": true
+    },
+    {
+      "linea": 107,
+      "declaracion": "Route::post('save-location','LocationController@store');",
+      "controlador": "LocationController",
+      "metodo": "store",
+      "metodo_existe": true
+    },
+    {
+      "linea": 108,
+      "declaracion": "Route::get('edit-location/{id}','LocationController@edit')->middleware(['permission:edit_location']);",
+      "controlador": "LocationController",
+      "metodo": "edit",
+      "metodo_existe": true
+    },
+    {
+      "linea": 109,
+      "declaracion": "Route::post('update-location/{id}','LocationController@update');",
+      "controlador": "LocationController",
+      "metodo": "update",
+      "metodo_existe": true
+    },
+    {
+      "linea": 110,
+      "declaracion": "Route::post('delete-location/{id}','LocationController@destroy')->middleware(['permission:delete_location']);",
+      "controlador": "LocationController",
+      "metodo": "destroy",
+      "metodo_existe": true
+    },
+    {
+      "linea": 111,
+      "declaracion": "Route::get('loc_code-valid','LocationController@validLocCode');",
+      "controlador": "LocationController",
+      "metodo": "validLocCode",
+      "metodo_existe": true
+    },
+    {
+      "linea": 114,
+      "declaracion": "Route::get('item','ItemController@index')->middleware(['permission:manage_item']);",
+      "controlador": "ItemController",
+      "metodo": "index",
+      "metodo_existe": true
+    },
+    {
+      "linea": 115,
+      "declaracion": "Route::get('create-item/{tab}','ItemController@create')->middleware(['permission:add_item']);",
+      "controlador": "ItemController",
+      "metodo": "create",
+      "metodo_existe": true
+    },
+    {
+      "linea": 116,
+      "declaracion": "Route::post('save-item','ItemController@store');",
+      "controlador": "ItemController",
+      "metodo": "store",
+      "metodo_existe": true
+    },
+    {
+      "linea": 117,
+      "declaracion": "Route::get('edit-item/{tab}/{id}','ItemController@edit')->middleware(['permission:edit_item']);",
+      "controlador": "ItemController",
+      "metodo": "edit",
+      "metodo_existe": true
+    },
+    {
+      "linea": 118,
+      "declaracion": "Route::get('copy-item/{id}','ItemController@copy');",
+      "controlador": "ItemController",
+      "metodo": "copy",
+      "metodo_existe": true
+    },
+    {
+      "linea": 119,
+      "declaracion": "Route::get('show-item/{id}','ItemController@show');",
+      "controlador": "ItemController",
+      "metodo": "show",
+      "metodo_existe": true
+    },
+    {
+      "linea": 120,
+      "declaracion": "Route::post('update-item/{id}','ItemController@update');",
+      "controlador": "ItemController",
+      "metodo": "update",
+      "metodo_existe": false
+    },
+    {
+      "linea": 121,
+      "declaracion": "Route::post('item/delete/{id}','ItemController@destroy')->middleware(['permission:delete_item']);",
+      "controlador": "ItemController",
+      "metodo": "destroy",
+      "metodo_existe": true
+    },
+    {
+      "linea": 123,
+      "declaracion": "Route::post('save-sale-price','ItemController@storeSalePrice');",
+      "controlador": "ItemController",
+      "metodo": "storeSalePrice",
+      "metodo_existe": true
+    },
+    {
+      "linea": 124,
+      "declaracion": "Route::post('save-purchase-price','ItemController@storePurchasePrice');",
+      "controlador": "ItemController",
+      "metodo": "storePurchasePrice",
+      "metodo_existe": true
+    },
+    {
+      "linea": 125,
+      "declaracion": "Route::post('update-item-info','ItemController@updateItemInfo');",
+      "controlador": "ItemController",
+      "metodo": "updateItemInfo",
+      "metodo_existe": true
+    },
+    {
+      "linea": 126,
+      "declaracion": "Route::post('add-sale-price','ItemController@addSalePrice');",
+      "controlador": "ItemController",
+      "metodo": "addSalePrice",
+      "metodo_existe": true
+    },
+    {
+      "linea": 127,
+      "declaracion": "Route::post('edit-sale-price','ItemController@editSalePrice');",
+      "controlador": "ItemController",
+      "metodo": "editSalePrice",
+      "metodo_existe": true
+    },
+    {
+      "linea": 128,
+      "declaracion": "Route::post('update-sale-price','ItemController@updateSalePrice');",
+      "controlador": "ItemController",
+      "metodo": "updateSalePrice",
+      "metodo_existe": true
+    },
+    {
+      "linea": 129,
+      "declaracion": "Route::post('delete-sale-price/{id}/{item_id}','ItemController@deleteSalePrice');",
+      "controlador": "ItemController",
+      "metodo": "deleteSalePrice",
+      "metodo_existe": true
+    },
+    {
+      "linea": 130,
+      "declaracion": "Route::post('update-purchase-price','ItemController@updatePurchasePrice');",
+      "controlador": "ItemController",
+      "metodo": "updatePurchasePrice",
+      "metodo_existe": true
+    },
+    {
+      "linea": 132,
+      "declaracion": "Route::post('add-stock','ItemController@addStock');",
+      "controlador": "ItemController",
+      "metodo": "addStock",
+      "metodo_existe": true
+    },
+    {
+      "linea": 133,
+      "declaracion": "Route::post('remove-stock','ItemController@removeStock');",
+      "controlador": "ItemController",
+      "metodo": "removeStock",
+      "metodo_existe": true
+    },
+    {
+      "linea": 134,
+      "declaracion": "Route::post('move-stock','ItemController@moveStock');",
+      "controlador": "ItemController",
+      "metodo": "moveStock",
+      "metodo_existe": true
+    },
+    {
+      "linea": 135,
+      "declaracion": "Route::post('stock-valid','ItemController@stockValidChk');",
+      "controlador": "ItemController",
+      "metodo": "stockValidChk",
+      "metodo_existe": true
+    },
+    {
+      "linea": 136,
+      "declaracion": "Route::post('qty-valid','ItemController@qtyValidAjax');",
+      "controlador": "ItemController",
+      "metodo": "qtyValidAjax",
+      "metodo_existe": true
+    },
+    {
+      "linea": 137,
+      "declaracion": "Route::get('trans-details/{id}','ItemController@showFullDetails');",
+      "controlador": "ItemController",
+      "metodo": "showFullDetails",
+      "metodo_existe": true
+    },
+    {
+      "linea": 139,
+      "declaracion": "Route::get('itemdownloadcsv/{type}', 'ItemController@downloadCsv');",
+      "controlador": "ItemController",
+      "metodo": "downloadCsv",
+      "metodo_existe": true
+    },
+    {
+      "linea": 140,
+      "declaracion": "Route::get('itemimport', 'ItemController@import');",
+      "controlador": "ItemController",
+      "metodo": "import",
+      "metodo_existe": true
+    },
+    {
+      "linea": 141,
+      "declaracion": "Route::post('itemimportcsv', 'ItemController@importCsv');",
+      "controlador": "ItemController",
+      "metodo": "importCsv",
+      "metodo_existe": true
+    },
+    {
+      "linea": 144,
+      "declaracion": "Route::get('company','CompanyController@index');",
+      "controlador": "CompanyController",
+      "metodo": "index",
+      "metodo_existe": true
+    },
+    {
+      "linea": 145,
+      "declaracion": "Route::get('create-company','CompanyController@create');",
+      "controlador": "CompanyController",
+      "metodo": "create",
+      "metodo_existe": true
+    },
+    {
+      "linea": 146,
+      "declaracion": "Route::post('save-company','CompanyController@store');",
+      "controlador": "CompanyController",
+      "metodo": "store",
+      "metodo_existe": true
+    },
+    {
+      "linea": 147,
+      "declaracion": "Route::get('edit-company/{id}','CompanyController@edit');",
+      "controlador": "CompanyController",
+      "metodo": "edit",
+      "metodo_existe": true
+    },
+    {
+      "linea": 148,
+      "declaracion": "Route::post('update-company/{id}','CompanyController@update');",
+      "controlador": "CompanyController",
+      "metodo": "update",
+      "metodo_existe": true
+    },
+    {
+      "linea": 149,
+      "declaracion": "Route::post('delete-company/{id}','CompanyController@destroy');",
+      "controlador": "CompanyController",
+      "metodo": "destroy",
+      "metodo_existe": true
+    },
+    {
+      "linea": 152,
+      "declaracion": "Route::get('sales/list','SalesController@index')->middleware(['permission:manage_invoice']);",
+      "controlador": "SalesController",
+      "metodo": "index",
+      "metodo_existe": true
+    },
+    {
+      "linea": 153,
+      "declaracion": "Route::get('sales/add','SalesController@create')->middleware(['permission:add_invoice']);",
+      "controlador": "SalesController",
+      "metodo": "create",
+      "metodo_existe": true
+    },
+    {
+      "linea": 154,
+      "declaracion": "Route::post('sales/save','SalesController@store');",
+      "controlador": "SalesController",
+      "metodo": "store",
+      "metodo_existe": true
+    },
+    {
+      "linea": 155,
+      "declaracion": "Route::get('sales/edit/{id}','SalesController@edit')->middleware(['permission:edit_invoice']);",
+      "controlador": "SalesController",
+      "metodo": "edit",
+      "metodo_existe": true
+    },
+    {
+      "linea": 156,
+      "declaracion": "Route::post('sales/update','SalesController@update');",
+      "controlador": "SalesController",
+      "metodo": "update",
+      "metodo_existe": true
+    },
+    {
+      "linea": 157,
+      "declaracion": "Route::post('sales/delete/{id}','SalesController@destroy')->middleware(['permission:delete_invoice']);",
+      "controlador": "SalesController",
+      "metodo": "destroy",
+      "metodo_existe": true
+    },
+    {
+      "linea": 158,
+      "declaracion": "Route::post('sales/reference-validation','SalesController@referenceValidation');",
+      "controlador": "SalesController",
+      "metodo": "referenceValidation",
+      "metodo_existe": true
+    },
+    {
+      "linea": 159,
+      "declaracion": "Route::post('sales/get-branches','SalesController@customerBranches');",
+      "controlador": "SalesController",
+      "metodo": "customerBranches",
+      "metodo_existe": true
+    },
+    {
+      "linea": 161,
+      "declaracion": "Route::post('sales/search','SalesController@search');",
+      "controlador": "SalesController",
+      "metodo": "search",
+      "metodo_existe": true
+    },
+    {
+      "linea": 162,
+      "declaracion": "Route::post('sales/quantity-validation','SalesController@quantityValidation');",
+      "controlador": "SalesController",
+      "metodo": "quantityValidation",
+      "metodo_existe": true
+    },
+    {
+      "linea": 163,
+      "declaracion": "Route::post('sales/check-item-qty','SalesController@checkItemQty');",
+      "controlador": "SalesController",
+      "metodo": "checkItemQty",
+      "metodo_existe": true
+    },
+    {
+      "linea": 164,
+      "declaracion": "Route::get('sales/preview/{id}','SalesController@pdfview');",
+      "controlador": "SalesController",
+      "metodo": "pdfview",
+      "metodo_existe": false
+    },
+    {
+      "linea": 165,
+      "declaracion": "Route::post('sales/quantity-validation-with-localtion','SalesController@quantityValidationWithLocaltion');",
+      "controlador": "SalesController",
+      "metodo": "quantityValidationWithLocaltion",
+      "metodo_existe": true
+    },
+    {
+      "linea": 166,
+      "declaracion": "Route::post('sales/quantity-validation-edit-invoice','SalesController@quantityValidationEditInvoice');",
+      "controlador": "SalesController",
+      "metodo": "quantityValidationEditInvoice",
+      "metodo_existe": true
+    },
+    {
+      "linea": 167,
+      "declaracion": "Route::get('sales/filtering','SalesController@salesFiltering');",
+      "controlador": "SalesController",
+      "metodo": "salesFiltering",
+      "metodo_existe": true
+    },
+    {
+      "linea": 170,
+      "declaracion": "Route::get('order/list','SalesOrderController@index')->middleware(['permission:manage_order']);",
+      "controlador": "SalesOrderController",
+      "metodo": "index",
+      "metodo_existe": true
+    },
+    {
+      "linea": 171,
+      "declaracion": "Route::get('order/add','SalesOrderController@create')->middleware(['permission:add_order']);",
+      "controlador": "SalesOrderController",
+      "metodo": "create",
+      "metodo_existe": true
+    },
+    {
+      "linea": 172,
+      "declaracion": "Route::post('order/save','SalesOrderController@store');",
+      "controlador": "SalesOrderController",
+      "metodo": "store",
+      "metodo_existe": true
+    },
+    {
+      "linea": 173,
+      "declaracion": "Route::get('order/edit/{id}','SalesOrderController@edit')->middleware(['permission:edit_order']);",
+      "controlador": "SalesOrderController",
+      "metodo": "edit",
+      "metodo_existe": true
+    },
+    {
+      "linea": 174,
+      "declaracion": "Route::post('order/update','SalesOrderController@update');",
+      "controlador": "SalesOrderController",
+      "metodo": "update",
+      "metodo_existe": true
+    },
+    {
+      "linea": 175,
+      "declaracion": "Route::post('order/delete/{id}','SalesOrderController@destroy')->middleware(['permission:delete_order']);",
+      "controlador": "SalesOrderController",
+      "metodo": "destroy",
+      "metodo_existe": true
+    },
+    {
+      "linea": 176,
+      "declaracion": "Route::get('order/view-order/{id}','SalesOrderController@viewOrder');",
+      "controlador": "SalesOrderController",
+      "metodo": "viewOrder",
+      "metodo_existe": true
+    },
+    {
+      "linea": 177,
+      "declaracion": "Route::post('order/convert-order','SalesOrderController@convertOrder');",
+      "controlador": "SalesOrderController",
+      "metodo": "convertOrder",
+      "metodo_existe": true
+    },
+    {
+      "linea": 179,
+      "declaracion": "Route::post('order/search','SalesOrderController@search');",
+      "controlador": "SalesOrderController",
+      "metodo": "search",
+      "metodo_existe": true
+    },
+    {
+      "linea": 180,
+      "declaracion": "Route::post('order/quantity-validation','SalesOrderController@quantityValidation');",
+      "controlador": "SalesOrderController",
+      "metodo": "quantityValidation",
+      "metodo_existe": true
+    },
+    {
+      "linea": 182,
+      "declaracion": "Route::get('order/view-order-details/{id}','SalesOrderController@viewOrderDetails');",
+      "controlador": "SalesOrderController",
+      "metodo": "viewOrderDetails",
+      "metodo_existe": true
+    },
+    {
+      "linea": 183,
+      "declaracion": "Route::get('order/manual-invoice-create/{id}','SalesOrderController@manualInvoiceCreate');",
+      "controlador": "SalesOrderController",
+      "metodo": "manualInvoiceCreate",
+      "metodo_existe": true
+    },
+    {
+      "linea": 184,
+      "declaracion": "Route::post('order/save-manual-invoice','SalesOrderController@storeManualInvoice');",
+      "controlador": "SalesOrderController",
+      "metodo": "storeManualInvoice",
+      "metodo_existe": true
+    },
+    {
+      "linea": 185,
+      "declaracion": "Route::get('order/auto-invoice-create/{id}','SalesOrderController@autoInvoiceCreate');",
+      "controlador": "SalesOrderController",
+      "metodo": "autoInvoiceCreate",
+      "metodo_existe": true
+    },
+    {
+      "linea": 186,
+      "declaracion": "Route::post('order/check-quantity-after-invoice','SalesOrderController@checkQuantityAfterInvoice');",
+      "controlador": "SalesOrderController",
+      "metodo": "checkQuantityAfterInvoice",
+      "metodo_existe": true
+    },
+    {
+      "linea": 187,
+      "declaracion": "Route::get('order/pdf/{order_id}','SalesOrderController@orderPdf');",
+      "controlador": "SalesOrderController",
+      "metodo": "orderPdf",
+      "metodo_existe": true
+    },
+    {
+      "linea": 188,
+      "declaracion": "Route::get('order/print/{order_id}','SalesOrderController@orderPrint');",
+      "controlador": "SalesOrderController",
+      "metodo": "orderPrint",
+      "metodo_existe": true
+    },
+    {
+      "linea": 189,
+      "declaracion": "Route::post('order/email-order-info','SalesOrderController@sendOrderInformationByEmail');",
+      "controlador": "SalesOrderController",
+      "metodo": "sendOrderInformationByEmail",
+      "metodo_existe": true
+    },
+    {
+      "linea": 190,
+      "declaracion": "Route::get('order/filtering','SalesOrderController@orderFiltering');",
+      "controlador": "SalesOrderController",
+      "metodo": "orderFiltering",
+      "metodo_existe": true
+    },
+    {
+      "linea": 194,
+      "declaracion": "Route::get('invoice/view-detail-invoice/{orderId}/{invoiceId}','InvoiceController@viewInvoiceDetails');",
+      "controlador": "InvoiceController",
+      "metodo": "viewInvoiceDetails",
+      "metodo_existe": true
+    },
+    {
+      "linea": 195,
+      "declaracion": "Route::post('invoice/email-invoice-info','InvoiceController@sendInvoiceInformationByEmail');",
+      "controlador": "InvoiceController",
+      "metodo": "sendInvoiceInformationByEmail",
+      "metodo_existe": true
+    },
+    {
+      "linea": 196,
+      "declaracion": "Route::get('invoice/pdf/{order_id}/{invoice_id}','InvoiceController@invoicePdf');",
+      "controlador": "InvoiceController",
+      "metodo": "invoicePdf",
+      "metodo_existe": true
+    },
+    {
+      "linea": 197,
+      "declaracion": "Route::get('invoice/print/{order_id}/{invoice_id}','InvoiceController@invoicePrint');",
+      "controlador": "InvoiceController",
+      "metodo": "invoicePrint",
+      "metodo_existe": true
+    },
+    {
+      "linea": 198,
+      "declaracion": "Route::post('invoice/delete/{id}','InvoiceController@destroy');",
+      "controlador": "InvoiceController",
+      "metodo": "destroy",
+      "metodo_existe": true
+    },
+    {
+      "linea": 199,
+      "declaracion": "Route::get('invoice/delete-invoice/{id}','InvoiceController@destroy');",
+      "controlador": "InvoiceController",
+      "metodo": "destroy",
+      "metodo_existe": true
+    },
+    {
+      "linea": 201,
+      "declaracion": "Route::get('customer/list','CustomerController@index')->middleware(['permission:manage_customer']);",
+      "controlador": "CustomerController",
+      "metodo": "index",
+      "metodo_existe": true
+    },
+    {
+      "linea": 202,
+      "declaracion": "Route::get('create-customer','CustomerController@create')->middleware(['permission:add_customer']);",
+      "controlador": "CustomerController",
+      "metodo": "create",
+      "metodo_existe": true
+    },
+    {
+      "linea": 203,
+      "declaracion": "Route::post('save-customer','CustomerController@store');",
+      "controlador": "CustomerController",
+      "metodo": "store",
+      "metodo_existe": true
+    },
+    {
+      "linea": 204,
+      "declaracion": "Route::get('customer/edit/{id}','CustomerController@edit')->middleware(['permission:edit_customer']);",
+      "controlador": "CustomerController",
+      "metodo": "edit",
+      "metodo_existe": true
+    },
+    {
+      "linea": 205,
+      "declaracion": "Route::get('customer/order/{id}','CustomerController@salesOrder');",
+      "controlador": "CustomerController",
+      "metodo": "salesOrder",
+      "metodo_existe": true
+    },
+    {
+      "linea": 206,
+      "declaracion": "Route::get('customer/invoice/{id}','CustomerController@invoice');",
+      "controlador": "CustomerController",
+      "metodo": "invoice",
+      "metodo_existe": true
+    },
+    {
+      "linea": 207,
+      "declaracion": "Route::get('customer/payment/{id}','CustomerController@payment');",
+      "controlador": "CustomerController",
+      "metodo": "payment",
+      "metodo_existe": true
+    },
+    {
+      "linea": 208,
+      "declaracion": "Route::get('customer/shipment/{id}','CustomerController@shipment');",
+      "controlador": "CustomerController",
+      "metodo": "shipment",
+      "metodo_existe": true
+    },
+    {
+      "linea": 209,
+      "declaracion": "Route::post('update-customer/{id}','CustomerController@update');",
+      "controlador": "CustomerController",
+      "metodo": "update",
+      "metodo_existe": true
+    },
+    {
+      "linea": 210,
+      "declaracion": "Route::post('customer/update-password','CustomerController@updatePassword');",
+      "controlador": "CustomerController",
+      "metodo": "updatePassword",
+      "metodo_existe": true
+    },
+    {
+      "linea": 211,
+      "declaracion": "Route::post('delete-customer/{id}','CustomerController@destroy')->middleware(['permission:delete_customer']);",
+      "controlador": "CustomerController",
+      "metodo": "destroy",
+      "metodo_existe": true
+    },
+    {
+      "linea": 213,
+      "declaracion": "Route::get('customerdownloadCsv/{type}', 'CustomerController@downloadCsv');",
+      "controlador": "CustomerController",
+      "metodo": "downloadCsv",
+      "metodo_existe": true
+    },
+    {
+      "linea": 214,
+      "declaracion": "Route::get('customerimport', 'CustomerController@import');",
+      "controlador": "CustomerController",
+      "metodo": "import",
+      "metodo_existe": true
+    },
+    {
+      "linea": 215,
+      "declaracion": "Route::post('customerimportcsv', 'CustomerController@importCsv');",
+      "controlador": "CustomerController",
+      "metodo": "importCsv",
+      "metodo_existe": true
+    },
+    {
+      "linea": 216,
+      "declaracion": "Route::post('customer/delete-sales-info', 'CustomerController@deleteSalesInfo');",
+      "controlador": "CustomerController",
+      "metodo": "deleteSalesInfo",
+      "metodo_existe": true
+    },
+    {
+      "linea": 220,
+      "declaracion": "Route::get('branch','CustomerController@index');",
+      "controlador": "CustomerController",
+      "metodo": "index",
+      "metodo_existe": true
+    },
+    {
+      "linea": 221,
+      "declaracion": "Route::get('create-branch','CustomerController@create');",
+      "controlador": "CustomerController",
+      "metodo": "create",
+      "metodo_existe": true
+    },
+    {
+      "linea": 222,
+      "declaracion": "Route::post('save-branch','CustomerController@storeBranch');",
+      "controlador": "CustomerController",
+      "metodo": "storeBranch",
+      "metodo_existe": true
+    },
+    {
+      "linea": 223,
+      "declaracion": "Route::post('edit-branch','CustomerController@editBranch');",
+      "controlador": "CustomerController",
+      "metodo": "editBranch",
+      "metodo_existe": true
+    },
+    {
+      "linea": 224,
+      "declaracion": "Route::post('update-branch','CustomerController@updateBranch');",
+      "controlador": "CustomerController",
+      "metodo": "updateBranch",
+      "metodo_existe": true
+    },
+    {
+      "linea": 225,
+      "declaracion": "Route::post('delete-branch/{id}','CustomerController@destroyBranch');",
+      "controlador": "CustomerController",
+      "metodo": "destroyBranch",
+      "metodo_existe": true
+    },
+    {
+      "linea": 228,
+      "declaracion": "Route::get('supplier','SupplierController@index')->middleware(['permission:manage_supplier']);",
+      "controlador": "SupplierController",
+      "metodo": "index",
+      "metodo_existe": true
+    },
+    {
+      "linea": 229,
+      "declaracion": "Route::get('create-supplier','SupplierController@create')->middleware(['permission:add_supplier']);",
+      "controlador": "SupplierController",
+      "metodo": "create",
+      "metodo_existe": true
+    },
+    {
+      "linea": 230,
+      "declaracion": "Route::post('save-supplier','SupplierController@store');",
+      "controlador": "SupplierController",
+      "metodo": "store",
+      "metodo_existe": true
+    },
+    {
+      "linea": 231,
+      "declaracion": "Route::get('edit-supplier/{id}','SupplierController@edit')->middleware(['permission:edit_supplier']);",
+      "controlador": "SupplierController",
+      "metodo": "edit",
+      "metodo_existe": true
+    },
+    {
+      "linea": 232,
+      "declaracion": "Route::post('update-supplier/{id}','SupplierController@update');",
+      "controlador": "SupplierController",
+      "metodo": "update",
+      "metodo_existe": true
+    },
+    {
+      "linea": 233,
+      "declaracion": "Route::post('delete-supplier/{id}','SupplierController@destroy')->middleware(['permission:delete_supplier']);",
+      "controlador": "SupplierController",
+      "metodo": "destroy",
+      "metodo_existe": true
+    },
+    {
+      "linea": 234,
+      "declaracion": "Route::get('supplier/orders/{id}','SupplierController@orderList');",
+      "controlador": "SupplierController",
+      "metodo": "orderList",
+      "metodo_existe": true
+    },
+    {
+      "linea": 236,
+      "declaracion": "Route::get('supplierdownloadCsv/{type}', 'SupplierController@downloadCsv');",
+      "controlador": "SupplierController",
+      "metodo": "downloadCsv",
+      "metodo_existe": true
+    },
+    {
+      "linea": 237,
+      "declaracion": "Route::get('supplierimport', 'SupplierController@import');",
+      "controlador": "SupplierController",
+      "metodo": "import",
+      "metodo_existe": true
+    },
+    {
+      "linea": 238,
+      "declaracion": "Route::post('supplierimportcsv', 'SupplierController@importCsv');",
+      "controlador": "SupplierController",
+      "metodo": "importCsv",
+      "metodo_existe": true
+    },
+    {
+      "linea": 241,
+      "declaracion": "Route::get('purchase/list','PurchaseController@index')->middleware(['permission:manage_purchase']);",
+      "controlador": "PurchaseController",
+      "metodo": "index",
+      "metodo_existe": true
+    },
+    {
+      "linea": 242,
+      "declaracion": "Route::get('purchase/add','PurchaseController@create')->middleware(['permission:add_purchase']);",
+      "controlador": "PurchaseController",
+      "metodo": "create",
+      "metodo_existe": true
+    },
+    {
+      "linea": 243,
+      "declaracion": "Route::post('purchase/save','PurchaseController@store');",
+      "controlador": "PurchaseController",
+      "metodo": "store",
+      "metodo_existe": true
+    },
+    {
+      "linea": 244,
+      "declaracion": "Route::get('purchase/edit/{id}','PurchaseController@edit')->middleware(['permission:edit_purchase']);",
+      "controlador": "PurchaseController",
+      "metodo": "edit",
+      "metodo_existe": true
+    },
+    {
+      "linea": 245,
+      "declaracion": "Route::post('purchase/update','PurchaseController@update');",
+      "controlador": "PurchaseController",
+      "metodo": "update",
+      "metodo_existe": true
+    },
+    {
+      "linea": 246,
+      "declaracion": "Route::post('purchase/delete/{id}','PurchaseController@destroy')->middleware(['permission:delete_purchase']);",
+      "controlador": "PurchaseController",
+      "metodo": "destroy",
+      "metodo_existe": true
+    },
+    {
+      "linea": 248,
+      "declaracion": "Route::post('purchase/item-search','PurchaseController@searchItem');",
+      "controlador": "PurchaseController",
+      "metodo": "searchItem",
+      "metodo_existe": true
+    },
+    {
+      "linea": 249,
+      "declaracion": "Route::get('purchase/view-purchase-details/{id}','PurchaseController@viewPurchaseInvoiceDetail');",
+      "controlador": "PurchaseController",
+      "metodo": "viewPurchaseInvoiceDetail",
+      "metodo_existe": true
+    },
+    {
+      "linea": 251,
+      "declaracion": "Route::get('purchase/pdf/{order_id}','PurchaseController@invoicePdf');",
+      "controlador": "PurchaseController",
+      "metodo": "invoicePdf",
+      "metodo_existe": true
+    },
+    {
+      "linea": 252,
+      "declaracion": "Route::get('purchase/print/{order_id}','PurchaseController@invoicePrint');",
+      "controlador": "PurchaseController",
+      "metodo": "invoicePrint",
+      "metodo_existe": true
+    },
+    {
+      "linea": 253,
+      "declaracion": "Route::post('purchase/reference-validation','PurchaseController@referenceValidation');",
+      "controlador": "PurchaseController",
+      "metodo": "referenceValidation",
+      "metodo_existe": true
+    },
+    {
+      "linea": 255,
+      "declaracion": "Route::get('purchase/filtering','PurchaseController@Filtering');",
+      "controlador": "PurchaseController",
+      "metodo": "Filtering",
+      "metodo_existe": true
+    },
+    {
+      "linea": 256,
+      "declaracion": "Route::post('purchase/email-purchase-info','PurchaseController@sendPurchaseInformationEmail');",
+      "controlador": "PurchaseController",
+      "metodo": "sendPurchaseInformationEmail",
+      "metodo_existe": true
+    },
+    {
+      "linea": 259,
+      "declaracion": "Route::get('transfer/list','StockTransferController@index')->middleware(['permission:manage_transfer']);",
+      "controlador": "StockTransferController",
+      "metodo": "index",
+      "metodo_existe": true
+    },
+    {
+      "linea": 260,
+      "declaracion": "Route::get('transfer/create','StockTransferController@create')->middleware(['permission:add_transfer']);",
+      "controlador": "StockTransferController",
+      "metodo": "create",
+      "metodo_existe": true
+    },
+    {
+      "linea": 261,
+      "declaracion": "Route::post('transfer/search','StockTransferController@itemSearch');",
+      "controlador": "StockTransferController",
+      "metodo": "itemSearch",
+      "metodo_existe": true
+    },
+    {
+      "linea": 262,
+      "declaracion": "Route::post('transfer/get-destination','StockTransferController@destinationList');",
+      "controlador": "StockTransferController",
+      "metodo": "destinationList",
+      "metodo_existe": true
+    },
+    {
+      "linea": 263,
+      "declaracion": "Route::post('transfer/check-item-qty','StockTransferController@checkItemQty');",
+      "controlador": "StockTransferController",
+      "metodo": "checkItemQty",
+      "metodo_existe": true
+    },
+    {
+      "linea": 264,
+      "declaracion": "Route::post('transfer/save','StockTransferController@store');",
+      "controlador": "StockTransferController",
+      "metodo": "store",
+      "metodo_existe": true
+    },
+    {
+      "linea": 265,
+      "declaracion": "Route::get('transfer/view-details/{id}','StockTransferController@details');",
+      "controlador": "StockTransferController",
+      "metodo": "details",
+      "metodo_existe": true
+    },
+    {
+      "linea": 266,
+      "declaracion": "Route::post('transfer/delete/{id}','StockTransferController@destroy')->middleware(['permission:delete_transfer']);",
+      "controlador": "StockTransferController",
+      "metodo": "destroy",
+      "metodo_existe": true
+    },
+    {
+      "linea": 268,
+      "declaracion": "Route::post('payment/save','PaymentController@createPayment');",
+      "controlador": "PaymentController",
+      "metodo": "createPayment",
+      "metodo_existe": true
+    },
+    {
+      "linea": 271,
+      "declaracion": "Route::get('tax','TaxController@index');",
+      "controlador": "TaxController",
+      "metodo": "index",
+      "metodo_existe": true
+    },
+    {
+      "linea": 272,
+      "declaracion": "Route::get('create-tax','TaxController@create')->middleware(['permission:add_tax']);",
+      "controlador": "TaxController",
+      "metodo": "create",
+      "metodo_existe": true
+    },
+    {
+      "linea": 273,
+      "declaracion": "Route::post('save-tax','TaxController@store');",
+      "controlador": "TaxController",
+      "metodo": "store",
+      "metodo_existe": true
+    },
+    {
+      "linea": 274,
+      "declaracion": "Route::post('edit-tax','TaxController@edit')->middleware(['permission:edit_tax']);",
+      "controlador": "TaxController",
+      "metodo": "edit",
+      "metodo_existe": true
+    },
+    {
+      "linea": 275,
+      "declaracion": "Route::post('update-tax','TaxController@update');",
+      "controlador": "TaxController",
+      "metodo": "update",
+      "metodo_existe": true
+    },
+    {
+      "linea": 276,
+      "declaracion": "Route::post('delete-tax/{id}','TaxController@destroy')->middleware(['permission:delete_tax']);",
+      "controlador": "TaxController",
+      "metodo": "destroy",
+      "metodo_existe": true
+    },
+    {
+      "linea": 279,
+      "declaracion": "Route::get('sales-type','SalesTypeController@index')->middleware(['permission:manage_sales_type']);",
+      "controlador": "SalesTypeController",
+      "metodo": "index",
+      "metodo_existe": true
+    },
+    {
+      "linea": 281,
+      "declaracion": "Route::post('save-sales-type','SalesTypeController@store');",
+      "controlador": "SalesTypeController",
+      "metodo": "store",
+      "metodo_existe": true
+    },
+    {
+      "linea": 282,
+      "declaracion": "Route::post('edit-sales-type','SalesTypeController@edit')->middleware(['permission:edit_sales_type']);",
+      "controlador": "SalesTypeController",
+      "metodo": "edit",
+      "metodo_existe": true
+    },
+    {
+      "linea": 283,
+      "declaracion": "Route::post('update-sales-type','SalesTypeController@update');",
+      "controlador": "SalesTypeController",
+      "metodo": "update",
+      "metodo_existe": true
+    },
+    {
+      "linea": 284,
+      "declaracion": "Route::post('delete-sales-type/{id}','SalesTypeController@destroy')->middleware(['permission:delete_sales_type']);",
+      "controlador": "SalesTypeController",
+      "metodo": "destroy",
+      "metodo_existe": true
+    },
+    {
+      "linea": 287,
+      "declaracion": "Route::get('setting-general','SettingController@index');",
+      "controlador": "SettingController",
+      "metodo": "index",
+      "metodo_existe": true
+    },
+    {
+      "linea": 288,
+      "declaracion": "Route::get('setting-email-template','SettingController@mailTemp');",
+      "controlador": "SettingController",
+      "metodo": "mailTemp",
+      "metodo_existe": true
+    },
+    {
+      "linea": 289,
+      "declaracion": "Route::get('setting-preference','SettingController@preference');",
+      "controlador": "SettingController",
+      "metodo": "preference",
+      "metodo_existe": true
+    },
+    {
+      "linea": 290,
+      "declaracion": "Route::get('setting-finance','SettingController@finance');",
+      "controlador": "SettingController",
+      "metodo": "finance",
+      "metodo_existe": true
+    },
+    {
+      "linea": 291,
+      "declaracion": "Route::get('setting-company','SettingController@company');",
+      "controlador": "SettingController",
+      "metodo": "company",
+      "metodo_existe": false
+    },
+    {
+      "linea": 292,
+      "declaracion": "Route::post('save-preference','SettingController@savePreference');",
+      "controlador": "SettingController",
+      "metodo": "savePreference",
+      "metodo_existe": true
+    },
+    {
+      "linea": 294,
+      "declaracion": "Route::get('currency','SettingController@currency')->middleware(['permission:manage_currency']);",
+      "controlador": "SettingController",
+      "metodo": "currency",
+      "metodo_existe": true
+    },
+    {
+      "linea": 295,
+      "declaracion": "Route::post('save-currency','SettingController@store');",
+      "controlador": "SettingController",
+      "metodo": "store",
+      "metodo_existe": true
+    },
+    {
+      "linea": 296,
+      "declaracion": "Route::post('edit-currency','SettingController@edit')->middleware(['permission:edit_currency']);",
+      "controlador": "SettingController",
+      "metodo": "edit",
+      "metodo_existe": true
+    },
+    {
+      "linea": 297,
+      "declaracion": "Route::post('update-currency','SettingController@update');",
+      "controlador": "SettingController",
+      "metodo": "update",
+      "metodo_existe": true
+    },
+    {
+      "linea": 298,
+      "declaracion": "Route::post('delete-currency/{id}','SettingController@destroy')->middleware(['permission:delete_currency']);",
+      "controlador": "SettingController",
+      "metodo": "destroy",
+      "metodo_existe": true
+    },
+    {
+      "linea": 300,
+      "declaracion": "Route::get('backup/list','SettingController@backupList')->middleware(['permission:manage_db_backup']);",
+      "controlador": "SettingController",
+      "metodo": "backupList",
+      "metodo_existe": true
+    },
+    {
+      "linea": 302,
+      "declaracion": "Route::get('back-up','SettingController@backupDB');",
+      "controlador": "SettingController",
+      "metodo": "backupDB",
+      "metodo_existe": true
+    },
+    {
+      "linea": 303,
+      "declaracion": "Route::get('email/setup','SettingController@emailSetup');",
+      "controlador": "SettingController",
+      "metodo": "emailSetup",
+      "metodo_existe": true
+    },
+    {
+      "linea": 304,
+      "declaracion": "Route::post('save-email-config','SettingController@emailSaveConfig');",
+      "controlador": "SettingController",
+      "metodo": "emailSaveConfig",
+      "metodo_existe": true
+    },
+    {
+      "linea": 305,
+      "declaracion": "Route::post('test-email','SettingController@testEmailConfig');",
+      "controlador": "SettingController",
+      "metodo": "testEmailConfig",
+      "metodo_existe": true
+    },
+    {
+      "linea": 309,
+      "declaracion": "Route::get('payment/terms','SettingController@paymentTerm')->middleware(['permission:manage_payment_term']);",
+      "controlador": "SettingController",
+      "metodo": "paymentTerm",
+      "metodo_existe": true
+    },
+    {
+      "linea": 310,
+      "declaracion": "Route::post('payment/terms/add','SettingController@addPaymentTerms')->middleware(['permission:add_payment_term']);",
+      "controlador": "SettingController",
+      "metodo": "addPaymentTerms",
+      "metodo_existe": true
+    },
+    {
+      "linea": 311,
+      "declaracion": "Route::post('payment/terms/edit','SettingController@editPaymentTerms')->middleware(['permission:edit_payment_term']);",
+      "controlador": "SettingController",
+      "metodo": "editPaymentTerms",
+      "metodo_existe": true
+    },
+    {
+      "linea": 312,
+      "declaracion": "Route::post('payment/terms/update','SettingController@updatePaymentTerms');",
+      "controlador": "SettingController",
+      "metodo": "updatePaymentTerms",
+      "metodo_existe": true
+    },
+    {
+      "linea": 313,
+      "declaracion": "Route::post('payment/terms/delete/{id}','SettingController@deletePaymentTerm')->middleware(['permission:delete_payment_term']);",
+      "controlador": "SettingController",
+      "metodo": "deletePaymentTerm",
+      "metodo_existe": true
+    },
+    {
+      "linea": 315,
+      "declaracion": "Route::get('payment/method','SettingController@paymentMethod')->middleware(['permission:manage_payment_method']);",
+      "controlador": "SettingController",
+      "metodo": "paymentMethod",
+      "metodo_existe": true
+    },
+    {
+      "linea": 316,
+      "declaracion": "Route::post('payment/method/add','SettingController@addPaymentMethod')->middleware(['permission:add_payment_method']);",
+      "controlador": "SettingController",
+      "metodo": "addPaymentMethod",
+      "metodo_existe": true
+    },
+    {
+      "linea": 317,
+      "declaracion": "Route::post('payment/method/edit','SettingController@editPaymentMethod')->middleware(['permission:edit_payment_method']);",
+      "controlador": "SettingController",
+      "metodo": "editPaymentMethod",
+      "metodo_existe": true
+    },
+    {
+      "linea": 318,
+      "declaracion": "Route::post('payment/method/update','SettingController@updatePaymentMethod');",
+      "controlador": "SettingController",
+      "metodo": "updatePaymentMethod",
+      "metodo_existe": true
+    },
+    {
+      "linea": 319,
+      "declaracion": "Route::post('payment/method/delete/{id}','SettingController@deletePaymentMethod')->middleware(['permission:delete_payment_method']);",
+      "controlador": "SettingController",
+      "metodo": "deletePaymentMethod",
+      "metodo_existe": true
+    },
+    {
+      "linea": 320,
+      "declaracion": "Route::get('company/setting','SettingController@companySetting');",
+      "controlador": "SettingController",
+      "metodo": "companySetting",
+      "metodo_existe": true
+    },
+    {
+      "linea": 321,
+      "declaracion": "Route::post('company/setting/save','SettingController@companySettingSave');",
+      "controlador": "SettingController",
+      "metodo": "companySettingSave",
+      "metodo_existe": true
+    },
+    {
+      "linea": 323,
+      "declaracion": "Route::post('company/image_delete','SettingController@deleteImage');",
+      "controlador": "SettingController",
+      "metodo": "deleteImage",
+      "metodo_existe": true
+    },
+    {
+      "linea": 325,
+      "declaracion": "Route::get('mail-temp','MailTemplateController@index');",
+      "controlador": "MailTemplateController",
+      "metodo": "index",
+      "metodo_existe": true
+    },
+    {
+      "linea": 326,
+      "declaracion": "Route::get('customer-invoice-temp/{id}','MailTemplateController@customerInvTemp');",
+      "controlador": "MailTemplateController",
+      "metodo": "customerInvTemp",
+      "metodo_existe": true
+    },
+    {
+      "linea": 327,
+      "declaracion": "Route::post('customer-invoice-temp/{id}','MailTemplateController@update');",
+      "controlador": "MailTemplateController",
+      "metodo": "update",
+      "metodo_existe": true
+    },
+    {
+      "linea": 330,
+      "declaracion": "Route::get('payment/list','PaymentController@index')->middleware(['permission:manage_payment']);",
+      "controlador": "PaymentController",
+      "metodo": "index",
+      "metodo_existe": true
+    },
+    {
+      "linea": 331,
+      "declaracion": "Route::post('payment/delete','PaymentController@delete')->middleware(['permission:delete_payment']);",
+      "controlador": "PaymentController",
+      "metodo": "delete",
+      "metodo_existe": true
+    },
+    {
+      "linea": 332,
+      "declaracion": "Route::get('payment/view-receipt/{id}','PaymentController@viewReceipt');",
+      "controlador": "PaymentController",
+      "metodo": "viewReceipt",
+      "metodo_existe": true
+    },
+    {
+      "linea": 333,
+      "declaracion": "Route::get('payment/create-receipt/{id}','PaymentController@createReceiptPdf');",
+      "controlador": "PaymentController",
+      "metodo": "createReceiptPdf",
+      "metodo_existe": true
+    },
+    {
+      "linea": 334,
+      "declaracion": "Route::get('payment/print-receipt/{id}','PaymentController@printReceipt');",
+      "controlador": "PaymentController",
+      "metodo": "printReceipt",
+      "metodo_existe": true
+    },
+    {
+      "linea": 335,
+      "declaracion": "Route::post('payment/email-payment-info','PaymentController@sendPaymentInformationByEmail');",
+      "controlador": "PaymentController",
+      "metodo": "sendPaymentInformationByEmail",
+      "metodo_existe": true
+    },
+    {
+      "linea": 336,
+      "declaracion": "Route::get('payment/pay-all/{orderid}','PaymentController@payAllAmount');",
+      "controlador": "PaymentController",
+      "metodo": "payAllAmount",
+      "metodo_existe": true
+    },
+    {
+      "linea": 338,
+      "declaracion": "Route::get('payment/filtering','PaymentController@paymentFiltering');",
+      "controlador": "PaymentController",
+      "metodo": "paymentFiltering",
+      "metodo_existe": true
+    },
+    {
+      "linea": 341,
+      "declaracion": "Route::get('shipment/add/{id}','ShipmentController@createShipment')->middleware(['permission:add_shipment']);",
+      "controlador": "ShipmentController",
+      "metodo": "createShipment",
+      "metodo_existe": true
+    },
+    {
+      "linea": 342,
+      "declaracion": "Route::post('shipment/store','ShipmentController@storeShipment');",
+      "controlador": "ShipmentController",
+      "metodo": "storeShipment",
+      "metodo_existe": true
+    },
+    {
+      "linea": 343,
+      "declaracion": "Route::get('shipment/create-auto-shipment/{id}','ShipmentController@storeAutoShipment');",
+      "controlador": "ShipmentController",
+      "metodo": "storeAutoShipment",
+      "metodo_existe": true
+    },
+    {
+      "linea": 344,
+      "declaracion": "Route::get('shipment/list','ShipmentController@index')->middleware(['permission:manage_shipment']);",
+      "controlador": "ShipmentController",
+      "metodo": "index",
+      "metodo_existe": true
+    },
+    {
+      "linea": 345,
+      "declaracion": "Route::post('shipment/status-change','ShipmentController@StatusChange');",
+      "controlador": "ShipmentController",
+      "metodo": "StatusChange",
+      "metodo_existe": true
+    },
+    {
+      "linea": 346,
+      "declaracion": "Route::post('shipment/delete/{id}','ShipmentController@destroy');",
+      "controlador": "ShipmentController",
+      "metodo": "destroy",
+      "metodo_existe": true
+    },
+    {
+      "linea": 347,
+      "declaracion": "Route::get('shipment/view-details/{order_id}/{shipment_id}','ShipmentController@shipmentDetails');",
+      "controlador": "ShipmentController",
+      "metodo": "shipmentDetails",
+      "metodo_existe": true
+    },
+    {
+      "linea": 348,
+      "declaracion": "Route::get('shipment/pdf/{order_id}/{shipment_id}','ShipmentController@pdfMake');",
+      "controlador": "ShipmentController",
+      "metodo": "pdfMake",
+      "metodo_existe": true
+    },
+    {
+      "linea": 349,
+      "declaracion": "Route::get('shipment/print/{order_id}/{shipment_id}','ShipmentController@shipmentPrint');",
+      "controlador": "ShipmentController",
+      "metodo": "shipmentPrint",
+      "metodo_existe": true
+    },
+    {
+      "linea": 350,
+      "declaracion": "Route::get('shipment/edit/{id}','ShipmentController@edit')->middleware(['permission:edit_shipment']);",
+      "controlador": "ShipmentController",
+      "metodo": "edit",
+      "metodo_existe": true
+    },
+    {
+      "linea": 351,
+      "declaracion": "Route::post('shipment/quantity-validation','ShipmentController@shipmentQuantityValidation');",
+      "controlador": "ShipmentController",
+      "metodo": "shipmentQuantityValidation",
+      "metodo_existe": true
+    },
+    {
+      "linea": 352,
+      "declaracion": "Route::post('shipment/update','ShipmentController@update');",
+      "controlador": "ShipmentController",
+      "metodo": "update",
+      "metodo_existe": true
+    },
+    {
+      "linea": 353,
+      "declaracion": "Route::post('shipment/email-shipment-info','ShipmentController@sendShipmentInformationByEmail');",
+      "controlador": "ShipmentController",
+      "metodo": "sendShipmentInformationByEmail",
+      "metodo_existe": true
+    },
+    {
+      "linea": 354,
+      "declaracion": "Route::get('shipment/delivery/{oid}/{sid}','ShipmentController@makeDelivery');",
+      "controlador": "ShipmentController",
+      "metodo": "makeDelivery",
+      "metodo_existe": true
+    },
+    {
+      "linea": 356,
+      "declaracion": "Route::get('shipment/filtering','ShipmentController@shipmentFiltering');",
+      "controlador": "ShipmentController",
+      "metodo": "shipmentFiltering",
+      "metodo_existe": true
+    },
+    {
+      "linea": 359,
+      "declaracion": "Route::get('report/inventory-stock-on-hand','ReportController@inventoryStockOnHand')->middleware(['permission:manage_stock_on_hand']);",
+      "controlador": "ReportController",
+      "metodo": "inventoryStockOnHand",
+      "metodo_existe": true
+    },
+    {
+      "linea": 361,
+      "declaracion": "Route::get('report/inventory-stock-on-hand-pdf','ReportController@inventoryStockOnHandPdf');",
+      "controlador": "ReportController",
+      "metodo": "inventoryStockOnHandPdf",
+      "metodo_existe": true
+    },
+    {
+      "linea": 362,
+      "declaracion": "Route::get('report/inventory-stock-on-hand-csv','ReportController@inventoryStockOnHandCsv');",
+      "controlador": "ReportController",
+      "metodo": "inventoryStockOnHandCsv",
+      "metodo_existe": true
+    },
+    {
+      "linea": 363,
+      "declaracion": "Route::get('report/sales-report','ReportController@salesReport')->middleware(['permission:manage_sale_report']);",
+      "controlador": "ReportController",
+      "metodo": "salesReport",
+      "metodo_existe": true
+    },
+    {
+      "linea": 364,
+      "declaracion": "Route::get('report/sales-report-pdf','ReportController@salesReportPdf');",
+      "controlador": "ReportController",
+      "metodo": "salesReportPdf",
+      "metodo_existe": true
+    },
+    {
+      "linea": 365,
+      "declaracion": "Route::get('report/sales-report-csv','ReportController@salesReportCsv');",
+      "controlador": "ReportController",
+      "metodo": "salesReportCsv",
+      "metodo_existe": true
+    },
+    {
+      "linea": 366,
+      "declaracion": "Route::get('report/sales-report-by-date/{date}','ReportController@salesReportByDate');",
+      "controlador": "ReportController",
+      "metodo": "salesReportByDate",
+      "metodo_existe": true
+    },
+    {
+      "linea": 367,
+      "declaracion": "Route::get('report/sales-report-by-date-pdf/{date}','ReportController@salesReportByDatePdf');",
+      "controlador": "ReportController",
+      "metodo": "salesReportByDatePdf",
+      "metodo_existe": true
+    },
+    {
+      "linea": 368,
+      "declaracion": "Route::get('report/sales-report-by-date-csv/{date}','ReportController@salesReportByDateCsv');",
+      "controlador": "ReportController",
+      "metodo": "salesReportByDateCsv",
+      "metodo_existe": true
+    },
+    {
+      "linea": 370,
+      "declaracion": "Route::get('report/sales-history-report','ReportController@salesHistoryReport')->middleware(['permission:manage_sale_history_report']);",
+      "controlador": "ReportController",
+      "metodo": "salesHistoryReport",
+      "metodo_existe": true
+    },
+    {
+      "linea": 371,
+      "declaracion": "Route::get('report/sales-history-report-pdf','ReportController@salesHistoryReportPdf');",
+      "controlador": "ReportController",
+      "metodo": "salesHistoryReportPdf",
+      "metodo_existe": true
+    },
+    {
+      "linea": 372,
+      "declaracion": "Route::get('report/sales-history-report-csv','ReportController@salesHistoryReportCsv');",
+      "controlador": "ReportController",
+      "metodo": "salesHistoryReportCsv",
+      "metodo_existe": true
+    },
+    {
+      "linea": 374,
+      "declaracion": "Route::get('report/purchase-report','ReportController@purchaseReport')->middleware(['permission:manage_purchase_report']);",
+      "controlador": "ReportController",
+      "metodo": "purchaseReport",
+      "metodo_existe": true
+    },
+    {
+      "linea": 375,
+      "declaracion": "Route::get('report/purchase-report-pdf','ReportController@purchaseReportPdf');",
+      "controlador": "ReportController",
+      "metodo": "purchaseReportPdf",
+      "metodo_existe": true
+    },
+    {
+      "linea": 376,
+      "declaracion": "Route::get('report/purchase-report-csv','ReportController@purchaseReportCsv');",
+      "controlador": "ReportController",
+      "metodo": "purchaseReportCsv",
+      "metodo_existe": true
+    },
+    {
+      "linea": 377,
+      "declaracion": "Route::get('report/purchase_report_datewise/{time}','ReportController@purchaseReportDateWise');",
+      "controlador": "ReportController",
+      "metodo": "purchaseReportDateWise",
+      "metodo_existe": true
+    },
+    {
+      "linea": 378,
+      "declaracion": "Route::get('report/purchase-year-list','ReportController@purchaseYearList');",
+      "controlador": "ReportController",
+      "metodo": "purchaseYearList",
+      "metodo_existe": false
+    },
+    {
+      "linea": 380,
+      "declaracion": "Route::get('report/member-report','UserController@memberReport')->middleware(['permission:manage_team_report']);",
+      "controlador": "UserController",
+      "metodo": "memberReport",
+      "metodo_existe": true
+    },
+    {
+      "linea": 383,
+      "declaracion": "Route::match(['get','post'],'barcode/create',  'BarcodeController@index')->middleware(['permission:manage_barcode']);",
+      "controlador": "BarcodeController",
+      "metodo": "index",
+      "metodo_existe": true
+    },
+    {
+      "linea": 384,
+      "declaracion": "Route::post('barcode/search','BarcodeController@search');",
+      "controlador": "BarcodeController",
+      "metodo": "search",
+      "metodo_existe": true
+    },
+    {
+      "linea": 387,
+      "declaracion": "Route::get('purchase_receive/list','ReceiveController@receiveList');",
+      "controlador": "ReceiveController",
+      "metodo": "receiveList",
+      "metodo_existe": true
+    },
+    {
+      "linea": 389,
+      "declaracion": "Route::get('receive/all/{id}','ReceiveController@allReceive');",
+      "controlador": "ReceiveController",
+      "metodo": "allReceive",
+      "metodo_existe": true
+    },
+    {
+      "linea": 390,
+      "declaracion": "Route::post('receive/all_store','ReceiveController@allStore');",
+      "controlador": "ReceiveController",
+      "metodo": "allStore",
+      "metodo_existe": false
+    },
+    {
+      "linea": 391,
+      "declaracion": "Route::get('receive/manual/{id}','ReceiveController@manualReceive');",
+      "controlador": "ReceiveController",
+      "metodo": "manualReceive",
+      "metodo_existe": true
+    },
+    {
+      "linea": 392,
+      "declaracion": "Route::post('receive/manual_store','ReceiveController@manualStore');",
+      "controlador": "ReceiveController",
+      "metodo": "manualStore",
+      "metodo_existe": true
+    },
+    {
+      "linea": 393,
+      "declaracion": "Route::get('receive/details/{id}','ReceiveController@receiveDetails');",
+      "controlador": "ReceiveController",
+      "metodo": "receiveDetails",
+      "metodo_existe": true
+    },
+    {
+      "linea": 394,
+      "declaracion": "Route::get('receive/pdf/{id}','ReceiveController@receivePdf');",
+      "controlador": "ReceiveController",
+      "metodo": "receivePdf",
+      "metodo_existe": true
+    },
+    {
+      "linea": 395,
+      "declaracion": "Route::get('receive/print/{id}','ReceiveController@receivePrint');",
+      "controlador": "ReceiveController",
+      "metodo": "receivePrint",
+      "metodo_existe": true
+    },
+    {
+      "linea": 396,
+      "declaracion": "Route::post('receive/delete','ReceiveController@destroy');",
+      "controlador": "ReceiveController",
+      "metodo": "destroy",
+      "metodo_existe": true
+    },
+    {
+      "linea": 397,
+      "declaracion": "Route::get('receive/edit/{id}','ReceiveController@edit');",
+      "controlador": "ReceiveController",
+      "metodo": "edit",
+      "metodo_existe": true
+    },
+    {
+      "linea": 398,
+      "declaracion": "Route::post('receive/update','ReceiveController@update');",
+      "controlador": "ReceiveController",
+      "metodo": "update",
+      "metodo_existe": true
+    },
+    {
+      "linea": 399,
+      "declaracion": "Route::post('receive/email-purchase-info','ReceiveController@purchaseReceivedEmail');",
+      "controlador": "ReceiveController",
+      "metodo": "purchaseReceivedEmail",
+      "metodo_existe": true
+    },
+    {
+      "linea": 400,
+      "declaracion": "Route::get('receive/filter','ReceiveController@receiveFilter');",
+      "controlador": "ReceiveController",
+      "metodo": "receiveFilter",
+      "metodo_existe": true
+    }
+  ],
+  "tablas_dump": [
+    {
+      "tabla": "backup",
+      "motor": "MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci",
+      "columnas": [
+        "`id` int(10) UNSIGNED NOT NULL,",
+        "  `name` varchar(50) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `created_at` timestamp NULL DEFAULT NULL,",
+        "  `updated_at` timestamp NULL DEFAULT NULL"
+      ]
+    },
+    {
+      "tabla": "countries",
+      "motor": "MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci",
+      "columnas": [
+        "`id` int(10) UNSIGNED NOT NULL,",
+        "  `country` varchar(50) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `code` varchar(5) COLLATE utf8_unicode_ci NOT NULL"
+      ]
+    },
+    {
+      "tabla": "currency",
+      "motor": "MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci",
+      "columnas": [
+        "`id` int(10) UNSIGNED NOT NULL,",
+        "  `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `symbol` char(3) COLLATE utf8_unicode_ci NOT NULL"
+      ]
+    },
+    {
+      "tabla": "cust_branch",
+      "motor": "MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci",
+      "columnas": [
+        "`branch_code` int(10) UNSIGNED NOT NULL,",
+        "  `debtor_no` int(11) NOT NULL,",
+        "  `br_name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `br_address` varchar(255) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `br_contact` varchar(255) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `billing_street` varchar(255) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `billing_city` varchar(255) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `billing_state` varchar(255) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `billing_zip_code` varchar(255) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `billing_country_id` varchar(255) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `shipping_street` varchar(255) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `shipping_city` varchar(255) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `shipping_state` varchar(255) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `shipping_zip_code` varchar(255) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `shipping_country_id` varchar(255) COLLATE utf8_unicode_ci NOT NULL"
+      ]
+    },
+    {
+      "tabla": "debtors_master",
+      "motor": "MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci",
+      "columnas": [
+        "`debtor_no` int(10) UNSIGNED NOT NULL,",
+        "  `name` varchar(50) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `email` varchar(50) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `password` varchar(100) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `address` text COLLATE utf8_unicode_ci NOT NULL,",
+        "  `phone` varchar(15) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `sales_type` int(11) NOT NULL,",
+        "  `remember_token` varchar(255) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `inactive` tinyint(4) NOT NULL DEFAULT '0',",
+        "  `vat_no` varchar(100) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `created_at` timestamp NULL DEFAULT NULL,",
+        "  `updated_at` timestamp NULL DEFAULT NULL"
+      ]
+    },
+    {
+      "tabla": "email_config",
+      "motor": "MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci",
+      "columnas": [
+        "`id` int(10) UNSIGNED NOT NULL,",
+        "  `type` varchar(10) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `email_protocol` varchar(255) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `email_encryption` varchar(255) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `smtp_host` varchar(255) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `smtp_port` varchar(255) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `smtp_email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `smtp_username` varchar(255) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `smtp_password` varchar(255) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `from_address` varchar(255) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `from_name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `sender_name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `sender_email` varchar(255) COLLATE utf8_unicode_ci NOT NULL"
+      ]
+    },
+    {
+      "tabla": "email_temp_details",
+      "motor": "MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci",
+      "columnas": [
+        "`id` int(10) UNSIGNED NOT NULL,",
+        "  `temp_id` int(11) NOT NULL,",
+        "  `subject` varchar(255) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `body` text COLLATE utf8_unicode_ci NOT NULL,",
+        "  `lang` varchar(255) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `lang_id` tinyint(4) NOT NULL"
+      ]
+    },
+    {
+      "tabla": "invoice_payment_terms",
+      "motor": "MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci",
+      "columnas": [
+        "`id` int(10) UNSIGNED NOT NULL,",
+        "  `terms` varchar(255) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `days_before_due` int(11) NOT NULL,",
+        "  `defaults` tinyint(4) NOT NULL DEFAULT '1'"
+      ]
+    },
+    {
+      "tabla": "item_code",
+      "motor": "MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci",
+      "columnas": [
+        "`id` int(10) UNSIGNED NOT NULL,",
+        "  `stock_id` varchar(30) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `description` varchar(100) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `category_id` int(11) NOT NULL,",
+        "  `item_image` varchar(100) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `inactive` tinyint(4) NOT NULL DEFAULT '0',",
+        "  `deleted_status` tinyint(4) NOT NULL DEFAULT '0',",
+        "  `created_at` timestamp NULL DEFAULT NULL,",
+        "  `updated_at` timestamp NULL DEFAULT NULL"
+      ]
+    },
+    {
+      "tabla": "item_tax_types",
+      "motor": "MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci",
+      "columnas": [
+        "`id` int(10) UNSIGNED NOT NULL,",
+        "  `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `tax_rate` double(8,2) NOT NULL,",
+        "  `exempt` tinyint(4) NOT NULL,",
+        "  `defaults` tinyint(4) NOT NULL"
+      ]
+    },
+    {
+      "tabla": "item_unit",
+      "motor": "MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci",
+      "columnas": [
+        "`id` int(10) UNSIGNED NOT NULL,",
+        "  `abbr` varchar(20) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `name` varchar(20) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `inactive` tinyint(4) NOT NULL DEFAULT '0',",
+        "  `created_at` timestamp NULL DEFAULT NULL,",
+        "  `updated_at` timestamp NULL DEFAULT NULL"
+      ]
+    },
+    {
+      "tabla": "location",
+      "motor": "MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci",
+      "columnas": [
+        "`id` int(10) UNSIGNED NOT NULL,",
+        "  `loc_code` varchar(10) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `location_name` varchar(60) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `delivery_address` varchar(60) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `email` varchar(60) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `phone` varchar(60) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `fax` varchar(60) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `contact` varchar(60) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `inactive` tinyint(4) NOT NULL DEFAULT '0',",
+        "  `created_at` timestamp NULL DEFAULT NULL,",
+        "  `updated_at` timestamp NULL DEFAULT NULL"
+      ]
+    },
+    {
+      "tabla": "migrations",
+      "motor": "MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci",
+      "columnas": [
+        "`migration` varchar(255) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `batch` int(11) NOT NULL"
+      ]
+    },
+    {
+      "tabla": "password_resets",
+      "motor": "MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci",
+      "columnas": [
+        "`email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `token` varchar(255) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP"
+      ]
+    },
+    {
+      "tabla": "payment_history",
+      "motor": "MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci",
+      "columnas": [
+        "`id` int(10) UNSIGNED NOT NULL,",
+        "  `payment_type_id` int(11) NOT NULL,",
+        "  `order_reference` varchar(255) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `invoice_reference` varchar(255) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `payment_date` date NOT NULL,",
+        "  `amount` double DEFAULT '0',",
+        "  `person_id` int(11) NOT NULL,",
+        "  `customer_id` int(11) NOT NULL,",
+        "  `reference` varchar(255) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `created_at` timestamp NULL DEFAULT NULL,",
+        "  `updated_at` timestamp NULL DEFAULT NULL"
+      ]
+    },
+    {
+      "tabla": "payment_terms",
+      "motor": "MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci",
+      "columnas": [
+        "`id` int(10) UNSIGNED NOT NULL,",
+        "  `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `defaults` int(11) NOT NULL"
+      ]
+    },
+    {
+      "tabla": "permissions",
+      "motor": "MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci",
+      "columnas": [
+        "`id` int(10) UNSIGNED NOT NULL,",
+        "  `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `display_name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,",
+        "  `description` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,",
+        "  `created_at` timestamp NULL DEFAULT NULL,",
+        "  `updated_at` timestamp NULL DEFAULT NULL"
+      ]
+    },
+    {
+      "tabla": "permission_role",
+      "motor": "MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci",
+      "columnas": [
+        "`permission_id` int(10) UNSIGNED NOT NULL,",
+        "  `role_id` int(10) UNSIGNED NOT NULL"
+      ]
+    },
+    {
+      "tabla": "preference",
+      "motor": "MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci",
+      "columnas": [
+        "`id` int(10) UNSIGNED NOT NULL,",
+        "  `category` varchar(255) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `field` varchar(30) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `value` varchar(20) COLLATE utf8_unicode_ci NOT NULL"
+      ]
+    },
+    {
+      "tabla": "purchase_prices",
+      "motor": "MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci",
+      "columnas": [
+        "`id` int(10) UNSIGNED NOT NULL,",
+        "  `stock_id` char(30) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `price` double NOT NULL DEFAULT '0',",
+        "  `suppliers_uom` char(30) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `conversion_factor` double DEFAULT '1',",
+        "  `supplier_description` char(50) COLLATE utf8_unicode_ci NOT NULL"
+      ]
+    },
+    {
+      "tabla": "purch_orders",
+      "motor": "MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci",
+      "columnas": [
+        "`order_no` int(10) UNSIGNED NOT NULL,",
+        "  `supplier_id` int(11) NOT NULL,",
+        "  `person_id` int(11) NOT NULL,",
+        "  `comments` varchar(255) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `ord_date` date NOT NULL,",
+        "  `reference` varchar(30) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `requisition_no` varchar(30) COLLATE utf8_unicode_ci DEFAULT NULL,",
+        "  `into_stock_location` varchar(50) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `delivery_address` varchar(100) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `total` double NOT NULL DEFAULT '0',",
+        "  `tax_included` enum('yes','no') COLLATE utf8_unicode_ci NOT NULL,",
+        "  `created_at` timestamp NULL DEFAULT NULL,",
+        "  `updated_at` timestamp NULL DEFAULT NULL"
+      ]
+    },
+    {
+      "tabla": "purch_order_details",
+      "motor": "MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci",
+      "columnas": [
+        "`po_detail_item` int(10) UNSIGNED NOT NULL,",
+        "  `order_no` int(11) NOT NULL,",
+        "  `item_code` varchar(30) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `description` varchar(100) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `qty_invoiced` double NOT NULL DEFAULT '0',",
+        "  `unit_price` double NOT NULL DEFAULT '0',",
+        "  `act_price` double NOT NULL DEFAULT '0',",
+        "  `tax_type_id` int(11) NOT NULL,",
+        "  `std_cost_unit` double NOT NULL DEFAULT '0',",
+        "  `quantity_ordered` double NOT NULL DEFAULT '0',",
+        "  `quantity_received` double NOT NULL DEFAULT '0',",
+        "  `qty_received` double NOT NULL DEFAULT '0',",
+        "  `created_at` timestamp NULL DEFAULT NULL,",
+        "  `updated_at` timestamp NULL DEFAULT NULL"
+      ]
+    },
+    {
+      "tabla": "receive_orders",
+      "motor": "MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci",
+      "columnas": [
+        "`id` int(10) UNSIGNED NOT NULL,",
+        "  `order_no` int(11) NOT NULL,",
+        "  `person_id` int(11) NOT NULL,",
+        "  `supplier_id` int(11) NOT NULL,",
+        "  `reference` varchar(30) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `location` varchar(255) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `receive_date` date NOT NULL,",
+        "  `created_at` timestamp NULL DEFAULT NULL,",
+        "  `updated_at` timestamp NULL DEFAULT NULL"
+      ]
+    },
+    {
+      "tabla": "receive_order_details",
+      "motor": "MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci",
+      "columnas": [
+        "`id` int(10) UNSIGNED NOT NULL,",
+        "  `order_no` int(11) NOT NULL,",
+        "  `receive_id` int(11) NOT NULL,",
+        "  `item_code` varchar(30) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `description` varchar(100) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `tax_type_id` int(11) NOT NULL,",
+        "  `unit_price` double NOT NULL DEFAULT '0',",
+        "  `quantity` double NOT NULL DEFAULT '0'"
+      ]
+    },
+    {
+      "tabla": "roles",
+      "motor": "MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci",
+      "columnas": [
+        "`id` int(10) UNSIGNED NOT NULL,",
+        "  `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `display_name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,",
+        "  `description` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,",
+        "  `created_at` timestamp NULL DEFAULT NULL,",
+        "  `updated_at` timestamp NULL DEFAULT NULL"
+      ]
+    },
+    {
+      "tabla": "role_user",
+      "motor": "MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci",
+      "columnas": [
+        "`user_id` int(10) UNSIGNED NOT NULL,",
+        "  `role_id` int(10) UNSIGNED NOT NULL"
+      ]
+    },
+    {
+      "tabla": "sales_orders",
+      "motor": "MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci",
+      "columnas": [
+        "`order_no` int(10) UNSIGNED NOT NULL,",
+        "  `trans_type` int(11) NOT NULL,",
+        "  `debtor_no` int(11) NOT NULL,",
+        "  `branch_id` int(11) NOT NULL,",
+        "  `person_id` int(11) NOT NULL,",
+        "  `version` tinyint(4) NOT NULL,",
+        "  `reference` varchar(100) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `customer_ref` varchar(20) COLLATE utf8_unicode_ci DEFAULT NULL,",
+        "  `order_reference_id` int(11) NOT NULL,",
+        "  `order_reference` varchar(200) COLLATE utf8_unicode_ci DEFAULT NULL,",
+        "  `comments` varchar(200) COLLATE utf8_unicode_ci DEFAULT NULL,",
+        "  `ord_date` date NOT NULL,",
+        "  `order_type` int(11) NOT NULL,",
+        "  `delivery_address` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,",
+        "  `contact_phone` varchar(30) COLLATE utf8_unicode_ci DEFAULT NULL,",
+        "  `contact_email` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,",
+        "  `deliver_to` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,",
+        "  `from_stk_loc` varchar(20) COLLATE utf8_unicode_ci DEFAULT NULL,",
+        "  `delivery_date` date DEFAULT NULL,",
+        "  `payment_id` tinyint(4) NOT NULL,",
+        "  `total` double NOT NULL DEFAULT '0',",
+        "  `paid_amount` double NOT NULL DEFAULT '0',",
+        "  `choices` enum('no','partial_created','full_created') COLLATE utf8_unicode_ci NOT NULL,",
+        "  `payment_term` tinyint(4) NOT NULL,",
+        "  `created_at` timestamp NULL DEFAULT NULL,",
+        "  `updated_at` timestamp NULL DEFAULT NULL"
+      ]
+    },
+    {
+      "tabla": "sales_order_details",
+      "motor": "MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci",
+      "columnas": [
+        "`id` int(10) UNSIGNED NOT NULL,",
+        "  `order_no` int(11) NOT NULL,",
+        "  `trans_type` int(11) NOT NULL,",
+        "  `stock_id` varchar(30) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `tax_type_id` int(11) NOT NULL,",
+        "  `description` varchar(100) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `unit_price` double NOT NULL DEFAULT '0',",
+        "  `qty_sent` double NOT NULL DEFAULT '0',",
+        "  `quantity` double NOT NULL DEFAULT '0',",
+        "  `shipment_qty` double NOT NULL DEFAULT '0',",
+        "  `discount_percent` double NOT NULL DEFAULT '0',",
+        "  `created_at` timestamp NULL DEFAULT NULL,",
+        "  `updated_at` timestamp NULL DEFAULT NULL"
+      ]
+    },
+    {
+      "tabla": "sales_types",
+      "motor": "MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci",
+      "columnas": [
+        "`id` int(10) UNSIGNED NOT NULL,",
+        "  `sales_type` varchar(255) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `tax_included` int(11) NOT NULL,",
+        "  `factor` double NOT NULL,",
+        "  `defaults` tinyint(4) NOT NULL"
+      ]
+    },
+    {
+      "tabla": "sale_prices",
+      "motor": "MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci",
+      "columnas": [
+        "`id` int(10) UNSIGNED NOT NULL,",
+        "  `stock_id` varchar(30) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `sales_type_id` int(11) NOT NULL,",
+        "  `curr_abrev` varchar(255) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `price` double NOT NULL"
+      ]
+    },
+    {
+      "tabla": "shipment",
+      "motor": "MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci",
+      "columnas": [
+        "`id` int(10) UNSIGNED NOT NULL,",
+        "  `order_no` int(11) NOT NULL,",
+        "  `trans_type` int(11) NOT NULL,",
+        "  `comments` text COLLATE utf8_unicode_ci NOT NULL,",
+        "  `status` tinyint(4) NOT NULL DEFAULT '0',",
+        "  `packed_date` date NOT NULL,",
+        "  `delivery_date` date NOT NULL,",
+        "  `created_at` timestamp NULL DEFAULT NULL,",
+        "  `updated_at` timestamp NULL DEFAULT NULL"
+      ]
+    },
+    {
+      "tabla": "shipment_details",
+      "motor": "MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci",
+      "columnas": [
+        "`id` int(10) UNSIGNED NOT NULL,",
+        "  `shipment_id` int(11) NOT NULL,",
+        "  `order_no` int(11) NOT NULL,",
+        "  `stock_id` varchar(30) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `tax_type_id` int(11) NOT NULL,",
+        "  `unit_price` double NOT NULL,",
+        "  `quantity` double NOT NULL,",
+        "  `discount_percent` double NOT NULL,",
+        "  `created_at` timestamp NULL DEFAULT NULL,",
+        "  `updated_at` timestamp NULL DEFAULT NULL"
+      ]
+    },
+    {
+      "tabla": "stock_category",
+      "motor": "MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci",
+      "columnas": [
+        "`category_id` int(10) UNSIGNED NOT NULL,",
+        "  `description` varchar(50) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `dflt_units` int(11) NOT NULL,",
+        "  `inactive` tinyint(4) NOT NULL DEFAULT '0',",
+        "  `created_at` timestamp NULL DEFAULT NULL,",
+        "  `updated_at` timestamp NULL DEFAULT NULL"
+      ]
+    },
+    {
+      "tabla": "stock_master",
+      "motor": "MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci",
+      "columnas": [
+        "`stock_id` varchar(30) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `category_id` int(11) NOT NULL,",
+        "  `tax_type_id` int(11) NOT NULL,",
+        "  `description` varchar(100) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `long_description` varchar(100) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `units` varchar(30) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `inactive` tinyint(4) NOT NULL DEFAULT '0',",
+        "  `deleted_status` tinyint(4) NOT NULL DEFAULT '0',",
+        "  `created_at` timestamp NULL DEFAULT NULL,",
+        "  `updated_at` timestamp NULL DEFAULT NULL"
+      ]
+    },
+    {
+      "tabla": "stock_moves",
+      "motor": "MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci",
+      "columnas": [
+        "`trans_id` int(10) UNSIGNED NOT NULL,",
+        "  `stock_id` varchar(30) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `order_no` int(11) NOT NULL,",
+        "  `receive_id` int(11) NOT NULL,",
+        "  `trans_type` smallint(6) NOT NULL DEFAULT '0',",
+        "  `loc_code` varchar(20) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `tran_date` date NOT NULL,",
+        "  `person_id` int(11) DEFAULT NULL,",
+        "  `order_reference` varchar(30) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `reference` varchar(30) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `transaction_reference_id` int(11) NOT NULL,",
+        "  `transfer_id` int(11) DEFAULT NULL,",
+        "  `note` varchar(255) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `qty` double NOT NULL DEFAULT '0',",
+        "  `price` double NOT NULL DEFAULT '0'"
+      ]
+    },
+    {
+      "tabla": "stock_transfer",
+      "motor": "MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci",
+      "columnas": [
+        "`id` int(10) UNSIGNED NOT NULL,",
+        "  `person_id` int(11) NOT NULL,",
+        "  `source` varchar(55) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `destination` varchar(55) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `note` text COLLATE utf8_unicode_ci NOT NULL,",
+        "  `qty` int(11) NOT NULL,",
+        "  `transfer_date` date NOT NULL"
+      ]
+    },
+    {
+      "tabla": "suppliers",
+      "motor": "MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci",
+      "columnas": [
+        "`supplier_id` int(10) UNSIGNED NOT NULL,",
+        "  `supp_name` varchar(30) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `email` varchar(30) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `address` text COLLATE utf8_unicode_ci NOT NULL,",
+        "  `contact` varchar(30) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `city` varchar(50) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `state` varchar(50) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `zipcode` varchar(20) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `country` varchar(50) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `inactive` tinyint(4) NOT NULL DEFAULT '0',",
+        "  `created_at` timestamp NULL DEFAULT NULL,",
+        "  `updated_at` timestamp NULL DEFAULT NULL"
+      ]
+    },
+    {
+      "tabla": "users",
+      "motor": "MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci",
+      "columnas": [
+        "`id` int(10) UNSIGNED NOT NULL,",
+        "  `user_id` varchar(60) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `password` varchar(100) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `real_name` varchar(100) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `role_id` int(11) NOT NULL DEFAULT '1',",
+        "  `phone` varchar(30) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `email` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,",
+        "  `picture` varchar(100) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `inactive` tinyint(4) NOT NULL DEFAULT '0',",
+        "  `remember_token` varchar(100) COLLATE utf8_unicode_ci NOT NULL,",
+        "  `created_at` timestamp NULL DEFAULT NULL,",
+        "  `updated_at` timestamp NULL DEFAULT NULL"
+      ]
+    }
+  ],
+  "vistas_blade": 184,
+  "archivos_controladores_incluyendo_copias": 34
+}
